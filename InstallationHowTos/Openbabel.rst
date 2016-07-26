@@ -4,7 +4,7 @@ How to install Openbabel
 Installation route 1
 --------------------
 
-Download from and compile from source via Github_.
+Download from Github_ and compile from source.
 
 .. _Github: https://github.com/openbabel/openbabel
 
