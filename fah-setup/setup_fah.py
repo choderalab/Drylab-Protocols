@@ -33,8 +33,8 @@ import protprep
 import argparse
 
 parser = argparse.ArgumentParser(description='Solvating and equillibrating PDB')
-parser.add_argument('--source_pdbfile', dest='source_pdbfile', action='store', default=None,
-                    help='source PDB filename')
+parser.add_argument('--source_pdbid', dest='source_pdbfile', action='store', default=None,
+                    help='the four letter pdbid of interest')
 parser.add_argument('--output_directory', dest='output_directory', action='store', default=None,
                     help='output directory')
 parser.add_argument('--run', dest='run_number', action='store', required=False, default=0,
@@ -70,7 +70,7 @@ print("Output directory: %s" % args.output_directory)
 output_path = args.output_directory
 
 # Source PDB
-pdbfilename = args.source_pdbfile
+pdbfilename = args.source_pdbfile # This is just the 4 character ID
 keep_crystallographic_water = False # keep crystallographic waters?
 # Forcefield
 ff_name = 'amber99sbildn'
