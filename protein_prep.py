@@ -4,8 +4,10 @@ A script to run Schrodinger's Protein Prep, relies on Schrodinger 2016-4, on a s
 
 Written by Steven Albanese, with gratuitious borrowing from Openmoltools' Schrodinger package, courtesy of Andrea Rizzi
 
-
 OpenMM Refinement code written by Gregory Ross
+
+2017/04/03 - Modified to separate input and output directories by Mehtap Isik.
+Downloaded from https://github.com/choderalab/Drylab-Protocols/blob/fah-setup/protein_prep.py on 2017/04/03.
 
 """
 
@@ -73,10 +75,11 @@ def protein_prep(input_file, output_file, cap, pH=7.4, fillsidechains=True, fill
     # Normalize paths
     input_file_path = os.path.abspath(input_file)
     input_file_dir, input_name = os.path.split(input_file_path)
+    output_file_path = os.path.abspath(output_file)
+    output_file_dir, output_name = os.path.split(output_file_path)
 
-    output_file_name = os.path.join(input_file_dir, output_file + '-prepped.pdb')
-    working_dir = os.path.join(input_file_dir, '%s-prepped' % input_name)
-
+    output_file_name = os.path.join(output_file_dir, output_name + '-prepped.pdb')
+    working_dir = os.path.join(output_file_dir, '%s-prepped' % input_name)
 
     # Check for output file pathway
     if not os.path.exists(working_dir):
@@ -129,23 +132,31 @@ def discard_organic(model, verbose=True):
     return model
 
 def openmm_clean(input_file, output_file, solvate=False):
+    """
+
+    If returns IOError about missing gaff.xml file, manually copy
+    gaff.xml to OpenMM path indicated in the error message.
+    """
 
     # Normalize paths
     input_file_path = os.path.abspath(input_file)
     input_file_dir, input_name = os.path.split(input_file_path)
-    input_name = os.path.join(input_file_dir, output_file + '-prepped.pdb')
 
-    output_file_name = os.path.join(input_file_dir, output_file + '-minimized.pdb')
-    working_dir = os.path.join(input_file_dir, '%s-prepped' % input_name)
+    output_file_path = os.path.abspath(output_file)
+    output_file_dir, output_name = os.path.split(output_file_path)
 
+    input_name = os.path.join(input_file_dir, input_name + '-prepped.pdb')
+    output_name = os.path.join(output_file_dir, output_name + '-prepped.pdb')
 
+    output_file_name = os.path.join(output_file_dir, output_file + '-minimized.pdb')
+    working_dir = os.path.join(output_file_dir, '%s-prepped' % output_name)
 
     # Initialize forcefield with small molecule capabilities
     forcefield = ForceField('gaff.xml', 'tip3p.xml', 'amber99sbildn.xml')
     forcefield.registerTemplateGenerator(gaffTemplateGenerator)
 
     # Use modeller to remove unwanted residues
-    pdb = PDBFile(input_name)
+    pdb = PDBFile(output_name)
     model = Modeller(pdb.topology, pdb.positions)
 
     # Remove unwanted molecules
@@ -167,7 +178,7 @@ def openmm_clean(input_file, output_file, solvate=False):
     # Print PDB
     positions = simulation.context.getState(getPositions=True).getPositions()
     PDBFile.writeFile(simulation.topology, positions,
-                      open(os.path.join(input_file_dir, output_file_name + '-minimized.pdb'), 'w'))
+                      open(os.path.join(output_file_dir, output_file_name + '-minimized.pdb'), 'w'))
 
 if __name__ == '__main__':
     protein_prep(file_name, output, cap, pH=ph)
