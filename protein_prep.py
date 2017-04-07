@@ -6,9 +6,7 @@ Written by Steven Albanese, with gratuitious borrowing from Openmoltools' Schrod
 
 OpenMM Refinement code written by Gregory Ross
 
-2017/04/03 - Modified to separate input and output directories by Mehtap Isik.
-Downloaded from https://github.com/choderalab/Drylab-Protocols/blob/fah-setup/protein_prep.py on 2017/04/03.
-
+Modified to separate input and output directories by Mehtap Isik.
 """
 
 
@@ -133,6 +131,7 @@ def discard_organic(model, verbose=True):
 
 def openmm_clean(input_file, output_file, solvate=False):
     """
+    Removes unwanted molecules and residues, and performs a short minimization.
 
     If returns IOError about missing gaff.xml file, manually copy
     gaff.xml to OpenMM path indicated in the error message.
