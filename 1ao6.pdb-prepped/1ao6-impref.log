@@ -1,0 +1,145 @@
+
+** Heavy-atom coordinates will be fixed: maxlevel set to 0
+  **
+  ** Beginning refinement level 0
+  **
+
+170403-17:14:15 WARNING There seems to be a user specific host file located at /Users/albaness/.schrodinger/schrodinger.hosts. Support for user specific host files is deprecated and might be removed in a future release. Please use the hosts file from the installation /opt/schrodinger/suites2016-4.
+Impact: WARNING There seems to be a user specific host file located at /Users/albaness/.schrodinger/schrodinger.hosts. Support for user specific host files is deprecated and might be removed in a future release. Please use the hosts file from the installation /opt/schrodinger/suites2016-4.
+%IMPACT-I (openwt): Request to open FORMATTED file 1ao6-impref_ref0.out on unit   2
+ Entering IMPACT execution environment 
+ Date: Monday, April 03 2017, at 17:14:17 EDT
+ Impact version 73015
+ mmshare version        36015
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1985 14.5.0 Darwin Kernel Version 14.5.0: Sun Sep 25 22:07:15 PDT 2016; root:xnu-2782.50.9~1/RELEASE_X86_64 x86_64
+ Job Name: 1ao6-impref_ref0
+ SCHRODINGER  directory: /opt/schrodinger/suites2016-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2016-4/impact-v7.3/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2016-4/mmshare-v3.6/bin/Darwin-x86_64
+
+ Clock-based global random seed:     1491254057
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ PARM read from file "paramstd.dat"
+ Parameter obtained from atomtyping
+      Current coord. are written to file: "1ao6-impref.init_coord.rst"
+      Box dimensions not written
+
+
+ Total number of atoms  =  9130
+ 
+ Neighbor List Cutoff Settings
+ ==================================
+ Cutoff radius:   10.0000000000000     
+ Update frequency: every           10  steps
+ Species   1 : Neighbors are calculated on a per residue basis
+ Species   1 : Cutoff by inter-atomic distances
+ 
+ Step number:          0         Non-bonded count:  2080822
+ E-pot        RMS grad     Max grad    
+ -4.85536E+03  1.08883E+03  5.51190E+04
+ Step number:         10         Non-bonded count:  2080822
+ -1.43569E+04  1.28889E+00  3.04546E+01
+ Step number:         20         Non-bonded count:  2080822
+ -1.45588E+04  1.27108E+00  4.86118E+01
+ Step number:         30         Non-bonded count:  2080822
+ -1.46755E+04  8.90652E-01  3.83505E+01
+ Step number:         40         Non-bonded count:  2080822
+ -1.47312E+04  5.20138E-01  2.77909E+01
+ Step number:         50         Non-bonded count:  2080822
+ -1.47580E+04  4.37106E-01  1.96192E+01
+ Step number:         60         Non-bonded count:  2080822
+ -1.47726E+04  3.04015E-01  1.46305E+01
+ Step number:         70         Non-bonded count:  2080822
+ -1.47811E+04  1.62606E-01  4.96280E+00
+ Step number:         80         Non-bonded count:  2080822
+ -1.47867E+04  1.68628E-01  9.46723E+00
+ Step number:         90         Non-bonded count:  2080822
+ -1.47912E+04  1.64780E-01  7.46802E+00
+ Step number:        100         Non-bonded count:  2080822
+ -1.47949E+04  1.63648E-01  4.74184E+00
+ Step number:        100         Non-bonded count:  2080822
+ -1.47949E+04  1.63648E-01  4.74184E+00
+      Current coord. are written to file: "1ao6-impref.min0_coord.rst"
+      Box dimensions not written
+      Current coordinates are read from file: "1ao6-impref.init_coord.rst"
+      Box dimensions not read
+          read from "1ao6-impref.init_coord.rst"
+  
+ Energy and Force Generation Info: 
+ --------------------------------- 
+ Number of E&F called:     314
+ PARM read from file "paramstd.dat"
+ Parameter obtained from atomtyping
+      Current coordinates are read from file: "1ao6-impref.min0_coord.rst"
+      Box dimensions not read
+          read from "1ao6-impref.min0_coord.rst"
+
+
+ Total number of atoms  =  9130
+ 
+ Neighbor List Cutoff Settings
+ ==================================
+ Cutoff radius:   10.0000000000000     
+ Update frequency: every           10  steps
+ Species   1 : Neighbors are calculated on a per residue basis
+ Species   1 : Cutoff by inter-atomic distances
+ 
+ Step number:          0         Non-bonded count:  2080822
+ E-pot        RMS grad     Max grad    
+ -1.25021E+04  2.90220E+00  2.85923E+01
+ Step number:         10         Non-bonded count:  2080822
+ -1.38000E+04  1.88749E+00  6.94643E+01
+ Step number:         20         Non-bonded count:  2080822
+ -1.40611E+04  1.44357E+00  7.51041E+01
+ Step number:         30         Non-bonded count:  2080822
+ -1.41401E+04  5.75612E-01  3.28549E+01
+ Step number:         40         Non-bonded count:  2080822
+ -1.41704E+04  4.41340E-01  2.37620E+01
+ Step number:         50         Non-bonded count:  2080822
+ -1.41847E+04  2.12542E-01  1.01770E+01
+ Step number:         60         Non-bonded count:  2080822
+ -1.41889E+04  1.17892E-01  3.72478E+00
+ Step number:         70         Non-bonded count:  2080822
+ -1.41907E+04  8.68911E-02  3.97123E+00
+ Step number:         80         Non-bonded count:  2080822
+ -1.41914E+04  5.31116E-02  1.42783E+00
+ Step number:         83         Non-bonded count:  2080822
+ E-pot        RMS grad     Max grad    
+ -1.41916E+04  4.17212E-02  1.23877E+00
+ Step number:         83         Non-bonded count:  2080822
+ -1.41916E+04  4.17212E-02  1.23877E+00
+  
+ Energy and Force Generation Info: 
+ --------------------------------- 
+ Number of E&F called:     580
+
+
+Final Energy Reports:
+------------------------------------
+ Total Energy of the system...... -1.41916E+04 kcal/mol
+ Total Potential Energy.......... -1.41916E+04 kcal/mol
+ Total Kinetic Energy............  0.00000E+00 kcal/mol
+ Temperature of the system.......        0.000 K
+ Bond Stretch Energy.............  3.65905E+01 kcal/mol
+ Angle Bending Energy............  5.88031E+02 kcal/mol
+ Torsion Angle Energy............  3.19647E+02 kcal/mol
+ Restraining Energy for Torsions.  0.00000E+00 kcal/mol
+ 1,4 Lennard Jones Energy........  9.16292E+02 kcal/mol
+ 1,4 Electrostatic Energy........ -6.02038E+02 kcal/mol
+ Lennard Jones Energy............ -8.18105E+02 kcal/mol
+ Electrostatic Energy............ -1.46320E+04 kcal/mol
+ H-bond Energy...................  0.00000E+00 kcal/mol
+ 
+ Exiting IMPACT execution environment 
+ Date: Monday, April 03 2017, at 17:14:53 EDT
+%IMPACT-I (timit): Total CPU time =      35.38 seconds (   0.6 minutes)
+Total elapsed time = 38 seconds
+  ** Completed refinement level 0      rmsd =  0.049
+
+** Refinement finished. Final level: 0
+
+** The refined complex file is 1ao6-impref_ref.mae.

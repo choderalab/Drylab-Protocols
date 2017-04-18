@@ -1,7 +1,7 @@
 """
 Set up AurKA spin probe simulations from charmm-gui output files (Solvator on the website)
 @author John D. Chodera, Steven K. Albanese
-@date 20 Mar 2017 
+@date 20 Mar 2017
 """
 
 #

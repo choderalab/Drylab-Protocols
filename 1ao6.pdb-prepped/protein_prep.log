@@ -1,0 +1,53 @@
+
+Working on structure 1
+Fixing common structure mistakes...
+  No mistakes were found
+Pre-treating metals...
+Done treating metals
+Assigning bond orders...
+  Using CCD: True
+  No bond orders were changed
+Removing and re-adding hydrogens...
+Treating metals...
+Creating di-sulfur bonds...
+   Created a bond between A:62 and A:53; changed residue names to "CYX "
+   Created a bond between A:91 and A:75; changed residue names to "CYX "
+   Created a bond between A:101 and A:90; changed residue names to "CYX "
+   Created a bond between A:169 and A:124; changed residue names to "CYX "
+   Created a bond between A:177 and A:168; changed residue names to "CYX "
+   Created a bond between A:246 and A:200; changed residue names to "CYX "
+   Created a bond between A:253 and A:245; changed residue names to "CYX "
+   Created a bond between A:279 and A:265; changed residue names to "CYX "
+   Created a bond between A:289 and A:278; changed residue names to "CYX "
+   Created a bond between A:361 and A:316; changed residue names to "CYX "
+   Created a bond between A:369 and A:360; changed residue names to "CYX "
+   Created a bond between A:438 and A:392; changed residue names to "CYX "
+   Created a bond between A:448 and A:437; changed residue names to "CYX "
+   Created a bond between A:477 and A:461; changed residue names to "CYX "
+   Created a bond between A:487 and A:476; changed residue names to "CYX "
+   Created a bond between A:559 and A:514; changed residue names to "CYX "
+   Created a bond between A:567 and A:558; changed residue names to "CYX "
+Converting Selenomethionines...
+Detecting missing residue atoms...
+Filling missing loops using Prime...
+Prime output file: /Users/albaness/github/Drylab-Protocols/1ao6.pdb-prepped/1ao6-missing-loops-out.maegz
+Finding het groups...
+Coloring atoms by element (green carbons in hets)...
+Finding het groups (for Epik)...
+Processing 0 het groups...
+  Using Epik with pH: 7.4
+        and pH Range: 0.0
+  Max states per het: 32
+  Epik was not run, as there are no preparable groups
+Running ProtAssign...
+  Uses -minimize option in ProtAssign
+  Using PROPKA with pH: 7.4
+  RUNNING: /opt/schrodinger/suites2016-4/utilities/protassign 1ao6-protassign.mae 1ao6-protassign-out.mae -NOJOBID -nowater -minimize -propka_pH 7.4
+Optimize H-bond job completed.
+Running restrained minimization...
+  RMSD: 0.3
+  Force field: 2005
+  hydrogens only
+done with preparation
+Writing to file...
+DONE. Output file: /Users/albaness/github/Drylab-Protocols/output.pdb-prepped.pdb
